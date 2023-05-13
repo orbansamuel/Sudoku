@@ -12,7 +12,7 @@ public:
         draw();
     }
     virtual void draw();
-    virtual void handle();
+    virtual void handle(genv::event ev);
 
 };
 

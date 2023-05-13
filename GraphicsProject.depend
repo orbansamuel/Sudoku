@@ -4,7 +4,7 @@
 	"graphics.hpp"
 	<iostream>
 
-1683987228 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
+1683991687 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
 	<vector>
 	"widgets.hpp"
 
@@ -413,21 +413,48 @@
 	"graphics.hpp"
 	"app.hpp"
 
-1683989614 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
+1684001372 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"app.hpp"
 	"push_button.hpp"
 	<iostream>
+	"static_pics.hpp"
 
-1683986768 c:\users\orbán sámuel\documents\github\sudoku\push_button.hpp
+1683991687 c:\users\orbán sámuel\documents\github\sudoku\push_button.hpp
 
-1683989311 source:c:\users\orbán sámuel\documents\github\sudoku\push_button.cpp
+1684001342 source:c:\users\orbán sámuel\documents\github\sudoku\push_button.cpp
 	"widgets.hpp"
 	"app.hpp"
 	"push_button.hpp"
 	"graphics.hpp"
 	<fstream>
 	<iostream>
+	<sstream>
+	"pics_read.hpp"
+
+1684001317 source:c:\users\orbán sámuel\documents\github\sudoku\static_pics.cpp
+	"widgets.hpp"
+	"app.hpp"
+	"push_button.hpp"
+	"graphics.hpp"
+	<fstream>
+	<iostream>
+	<sstream>
+	"static_pics.hpp"
+	"pics_read.hpp"
+
+1683997636 c:\users\orbán sámuel\documents\github\sudoku\static_pics.hpp
+
+1683999279 c:\users\orbán sámuel\documents\github\sudoku\pics_read.hpp
+	<iostream>
+	<vector>
+	"pics_read.hpp"
+	<iostream>
+	<vector>
+
+1683999279 source:c:\users\orbán sámuel\documents\github\sudoku\pics_read.cpp
+	"pics_read.hpp"
+	<fstream>
 	<sstream>
 
