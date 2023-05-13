@@ -45,8 +45,14 @@
 			<Add library="dxguid" />
 			<Add directory="lib" />
 		</Linker>
+		<Unit filename="app.cpp" />
+		<Unit filename="app.hpp" />
 		<Unit filename="graphicslib/graphics.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="push_button.cpp" />
+		<Unit filename="push_button.hpp" />
+		<Unit filename="widgets.cpp" />
+		<Unit filename="widgets.hpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
