@@ -11,9 +11,19 @@ using namespace genv;
 using namespace std;
 
 
+void Push_button::handle(genv::event ev)
+{
+    if(is_selected(ev.pos_x,ev.pos_y)) file = _selected;
+    else file = _unselected;
+
+}
+
+
 void Push_button::draw()
 {
-  vector<RGB> pics = pics_read(_filename);
+
+ // cout << file << endl;
+  vector<RGB> pics = pics_read(file);
 
   canvas c;
   c.open(_sx,_sy);
@@ -31,5 +41,8 @@ void Push_button::draw()
   gout << stamp(c,_x,_y);
 }
 
-void Push_button::handle(genv::event ev){}
+
+
+
+
 

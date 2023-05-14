@@ -9,7 +9,7 @@ std::vector<RGB> pics_read(std::string filename)
 
     if (!file)
     {
-        std::cout << "Nem sikerült megnyitni a fájlt." << std::endl;
+        std::cout << filename << " Nem sikerült megnyitni a fájlt." << std::endl;
         return pics;
     }
 

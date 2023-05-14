@@ -15,8 +15,7 @@ public:
         genv::gout.open(width,height);
     }
     void add_widget(Widget * w) {widgets.push_back(w);}
-    void event_loop();
-    void open(int XX, int YY);
+    void menu_loop();
 
     //virtual void app_event();
 

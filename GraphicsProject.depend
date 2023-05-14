@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1683981450 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
+1684078307 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
 	"app.hpp"
 	"graphics.hpp"
 	<iostream>
 
-1683991687 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
+1684066945 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
 	<vector>
 	"widgets.hpp"
 
-1682977781 c:\users\orbán sámuel\documents\github\sudoku\widgets.hpp
+1684068537 c:\users\orbán sámuel\documents\github\sudoku\widgets.hpp
 	"graphics.hpp"
 
 1683821861 c:\users\orbán sámuel\documents\github\sudoku\include\graphics.hpp
@@ -408,12 +408,12 @@
 
 1683821861 c:\users\orbán sámuel\documents\github\sudoku\graphicslib\keytbl.h
 
-1683710951 source:c:\users\orbán sámuel\documents\github\sudoku\widgets.cpp
+1684068257 source:c:\users\orbán sámuel\documents\github\sudoku\widgets.cpp
 	"widgets.hpp"
 	"graphics.hpp"
 	"app.hpp"
 
-1684001372 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
+1684078166 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"app.hpp"
@@ -421,9 +421,9 @@
 	<iostream>
 	"static_pics.hpp"
 
-1683991687 c:\users\orbán sámuel\documents\github\sudoku\push_button.hpp
+1684077150 c:\users\orbán sámuel\documents\github\sudoku\push_button.hpp
 
-1684001342 source:c:\users\orbán sámuel\documents\github\sudoku\push_button.cpp
+1684066212 source:c:\users\orbán sámuel\documents\github\sudoku\push_button.cpp
 	"widgets.hpp"
 	"app.hpp"
 	"push_button.hpp"
@@ -444,7 +444,7 @@
 	"static_pics.hpp"
 	"pics_read.hpp"
 
-1683997636 c:\users\orbán sámuel\documents\github\sudoku\static_pics.hpp
+1684068257 c:\users\orbán sámuel\documents\github\sudoku\static_pics.hpp
 
 1683999279 c:\users\orbán sámuel\documents\github\sudoku\pics_read.hpp
 	<iostream>
@@ -453,7 +453,7 @@
 	<iostream>
 	<vector>
 
-1683999279 source:c:\users\orbán sámuel\documents\github\sudoku\pics_read.cpp
+1684063457 source:c:\users\orbán sámuel\documents\github\sudoku\pics_read.cpp
 	"pics_read.hpp"
 	<fstream>
 	<sstream>
