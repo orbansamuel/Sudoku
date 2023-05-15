@@ -4,6 +4,7 @@
 #include "push_button.hpp"
 #include <iostream>
 #include "static_pics.hpp"
+#include "map.hpp"
 
 using namespace genv;
 
@@ -19,6 +20,7 @@ protected:
     Push_button * medium;
     Push_button * hard;
     Push_button * _back;
+    Field * palya;
 public:
     Menu(int w_width, int w_height) : App(w_width, w_height)
     {
@@ -32,6 +34,11 @@ public:
         easy = new Push_button(this,300,280,200,50,"easy","kepek/easy.csv","kepek/easykj.csv");
         medium = new Push_button(this,300,360,200,50,"medium","kepek/medium.csv","kepek/mediumkj.csv");
         hard = new Push_button(this,300,440,200,50,"hard","kepek/hard.csv","kepek/hardkj.csv");
+
+        //pálya
+
+        palya = new Field(this,100,100,550,550,"palya");
+
     }
 };
 

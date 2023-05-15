@@ -49,6 +49,8 @@
 		<Unit filename="app.hpp" />
 		<Unit filename="graphicslib/graphics.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="map.cpp" />
+		<Unit filename="map.hpp" />
 		<Unit filename="pics_read.cpp" />
 		<Unit filename="pics_read.hpp" />
 		<Unit filename="push_button.cpp" />

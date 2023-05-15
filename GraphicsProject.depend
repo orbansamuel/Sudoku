@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1684078307 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
+1684149026 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
 	"app.hpp"
 	"graphics.hpp"
 	<iostream>
 
-1684066945 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
+1684139078 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
 	<vector>
 	"widgets.hpp"
 
@@ -413,13 +413,14 @@
 	"graphics.hpp"
 	"app.hpp"
 
-1684078166 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
+1684143252 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"app.hpp"
 	"push_button.hpp"
 	<iostream>
 	"static_pics.hpp"
+	"map.hpp"
 
 1684077150 c:\users\orbán sámuel\documents\github\sudoku\push_button.hpp
 
@@ -457,4 +458,12 @@
 	"pics_read.hpp"
 	<fstream>
 	<sstream>
+
+1684145067 source:c:\users\orbán sámuel\documents\github\sudoku\map.cpp
+	"map.hpp"
+	"graphics.hpp"
+	"widgets.hpp"
+
+1684089187 c:\users\orbán sámuel\documents\github\sudoku\map.hpp
+	"widgets.hpp"
 

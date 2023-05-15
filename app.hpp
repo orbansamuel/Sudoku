@@ -16,6 +16,7 @@ public:
     }
     void add_widget(Widget * w) {widgets.push_back(w);}
     void menu_loop();
+    bool click(genv::event ev,int loop,std::string name,std::string state);
 
     //virtual void app_event();
 
