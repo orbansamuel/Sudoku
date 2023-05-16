@@ -55,6 +55,8 @@
 		<Unit filename="pics_read.hpp" />
 		<Unit filename="push_button.cpp" />
 		<Unit filename="push_button.hpp" />
+		<Unit filename="spinbox.cpp" />
+		<Unit filename="spinbox.hpp" />
 		<Unit filename="static_pics.cpp" />
 		<Unit filename="static_pics.hpp" />
 		<Unit filename="widgets.cpp" />

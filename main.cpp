@@ -5,6 +5,7 @@
 #include <iostream>
 #include "static_pics.hpp"
 #include "map.hpp"
+#include "spinbox.hpp"
 
 using namespace genv;
 
@@ -21,6 +22,8 @@ protected:
     Push_button * hard;
     Push_button * _back;
     Field * palya;
+    Spinbox * box;
+
 public:
     Menu(int w_width, int w_height) : App(w_width, w_height)
     {
@@ -37,15 +40,20 @@ public:
 
         //pálya
 
-        palya = new Field(this,100,100,550,550,"palya");
+        palya = new Field(this,125,200,550,550,"palya");
+
+        for(int i = 0; i < 9; i++)
+            for(int j = 0; j < 9; j++)
+        {
+            {
+                box = new Spinbox(this,125+j*61,200+i*61,60,60,"box",1,9);
+            }
+        }
 
     }
 };
 
-struct JatekMester
-{
 
-};
 
 int main()
 {

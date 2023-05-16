@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1684149026 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
+1684247703 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
 	"app.hpp"
 	"graphics.hpp"
 	<iostream>
@@ -413,7 +413,7 @@
 	"graphics.hpp"
 	"app.hpp"
 
-1684143252 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
+1684247605 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"app.hpp"
@@ -421,6 +421,7 @@
 	<iostream>
 	"static_pics.hpp"
 	"map.hpp"
+	"spinbox.hpp"
 
 1684077150 c:\users\orbán sámuel\documents\github\sudoku\push_button.hpp
 
@@ -459,11 +460,21 @@
 	<fstream>
 	<sstream>
 
-1684145067 source:c:\users\orbán sámuel\documents\github\sudoku\map.cpp
+1684247605 source:c:\users\orbán sámuel\documents\github\sudoku\map.cpp
 	"map.hpp"
 	"graphics.hpp"
 	"widgets.hpp"
+	"spinbox.hpp"
 
 1684089187 c:\users\orbán sámuel\documents\github\sudoku\map.hpp
+	"widgets.hpp"
+
+1684248556 source:c:\users\orbán sámuel\documents\github\sudoku\spinbox.cpp
+	"graphics.hpp"
+	"spinbox.hpp"
+	"app.hpp"
+	<iostream>
+
+1684249175 c:\users\orbán sámuel\documents\github\sudoku\spinbox.hpp
 	"widgets.hpp"
 
