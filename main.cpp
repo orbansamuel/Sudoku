@@ -6,8 +6,12 @@
 #include "static_pics.hpp"
 #include "map.hpp"
 #include "spinbox.hpp"
+#include <fstream>
+#include <string>
+#include <sstream>
 
 using namespace genv;
+using namespace std;
 
 class App;
 
@@ -42,11 +46,26 @@ public:
 
         palya = new Field(this,125,200,550,550,"palya");
 
+        vector<string> es;
+        string line;
+        ifstream e ("easy.txt");
+        while(getline(e,line))
+        {
+            getline(e,line);
+            es.push_back(line);
+        }
+        line = es[rand()%5000];
+        cout << line[0];
+        int x = 0;
+        int k = 0;
+        string c;
         for(int i = 0; i < 9; i++)
             for(int j = 0; j < 9; j++)
         {
             {
-                box = new Spinbox(this,125+j*61,200+i*61,60,60,"box",1,9);
+                c = line[x];
+                box = new Spinbox(this,125+j*61,200+i*61,60,60,"box",1,9,c);
+                x++;
             }
         }
 
@@ -59,7 +78,6 @@ int main()
 {
     Menu * menu = new Menu(800,800);
     menu->menu_loop();
-
     return 0;
 
 }

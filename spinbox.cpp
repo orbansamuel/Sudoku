@@ -6,7 +6,8 @@
 using namespace genv;
 void Spinbox::handle(genv::event ev)
 {
-
+    if(is_selected(ev.pos_x,ev.pos_y) && _szam == "0") _c = 255;
+    else _c = 0;
 
     if (up(ev) && _i < _max) {
         _i++;
@@ -36,11 +37,18 @@ void Spinbox::handle(genv::event ev)
 
 void Spinbox::draw()
 {
-
+    if(_szam == "0")
+    {
     gout << color(0,0,0) << move_to(_x+_sx-_sx/4,_y+_sy/4) << text("+");
-    gout << color(0,0,0) << move_to(_x+_sx-_sx/4,_y+_sy-_sy/4) << text("_");
+    gout << color(0,0,0) << move_to(_x+_sx-_sx/4,_y+_sy-_sy/3) << text("_");
+    gout << color(_c,200,0) << move_to(_x+_sx/4,_y+_sy/3) << text(_text);
+    }
+    else
+    {
+        gout << color(0,0,0) << move_to(_x+_sx/4,_y+_sy/3) << text(_szam);
+    }
 
-    gout << color(0,200,0) << move_to(_x+_sx/4,_y+_sy/3) << text(_text);
+
 
 }
 
@@ -49,7 +57,7 @@ void Spinbox::draw()
 
 bool Spinbox::up(genv::event ev)
 {
-    if(ev.pos_x > _x+_sx-_sx/4-10 && ev.pos_x < _x+_sx-_sx/4+12 &&
+    if(ev.pos_x > _x+_sx-_sx/4-15 && ev.pos_x < _x+_sx-_sx/4+12 &&
        ev.pos_y > _y+_sy/4-10 && ev.pos_y < _y+_sy/4+12 && ev.button == btn_left)
     {
         return true;
@@ -59,7 +67,8 @@ bool Spinbox::up(genv::event ev)
 
 bool Spinbox::down(genv::event ev)
 {
-     if(_x+_sx+4-_sx/3 < ev.pos_x && _y+_sy/2+1 < ev.pos_y && _x+_sx+4+_sx/3 > ev.pos_x && _y+_sy > ev.pos_y && ev.button == btn_left)
+     if(ev.pos_x > _x+_sx-_sx/4-15 && ev.pos_x < _x+_sx-_sx/4+12
+        && ev.pos_y > _y+_sy-_sy/3-25 && ev.pos_y < _y+_sy-_sy/3 + 12 && ev.button == btn_left)
     {
         return true;
     }

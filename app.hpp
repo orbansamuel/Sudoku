@@ -3,6 +3,8 @@
 
 #include <vector>
 #include "widgets.hpp"
+#include <string>
+
 
 class App
 {
