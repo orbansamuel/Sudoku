@@ -64,7 +64,7 @@ public:
         {
             {
                 c = line[x];
-                box = new Spinbox(this,125+j*61,200+i*61,60,60,"box",1,9,c);
+                box = new Spinbox(this,125+j*60+j*1,200+i*60+i*1,60,60,"box",1,9,c);
                 x++;
             }
         }

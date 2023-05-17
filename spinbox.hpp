@@ -13,6 +13,8 @@ protected:
     int _min;
     int _i;
     int _c = 0;
+    int _p = 0;
+    int _n = 0;
 public:
     Spinbox(App * a, int x,int y, int sx,int sy,std::string flag,int __min,int __max,std::string szam):Widget(a,x,y,sx,sy,flag), _max(__max), _min(__min), _szam(szam)
     {
