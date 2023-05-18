@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1684359582 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
+1684398364 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
 	"app.hpp"
 	"graphics.hpp"
 	<iostream>

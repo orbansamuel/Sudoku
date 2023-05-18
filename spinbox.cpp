@@ -7,8 +7,8 @@
 using namespace genv;
 void Spinbox::handle(genv::event ev)
 {
-    if(is_selected(ev.pos_x,ev.pos_y) && _szam == "0") _c = 255;
-    else _c = 0;
+   /* if(is_selected(ev.pos_x,ev.pos_y) && _szam == "0") _c = 255;
+    else _c = 0;*/
 
 
 

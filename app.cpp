@@ -13,7 +13,7 @@ void App::menu_loop()
     while(gin >> ev)
     {
 //&& ev.button==btn_left
-        if(menu && !game)
+        if(menu && !game && !level)
         {
             gout << move_to(0,0) << color(0,0,0) << box(_width,_height);
 
@@ -65,7 +65,7 @@ void App::menu_loop()
 
 
 
-        if(level)
+        if(level && !menu && !game)
         {
             gin.wait_event(ev);
            // std::cout << "itt voltam" << std::endl;
@@ -109,6 +109,7 @@ void App::menu_loop()
                 else if(click(ev,i,"easy","level"))
                 {
                         game = true;
+                        level = false;
                         break;
                 }
             }
@@ -116,22 +117,24 @@ void App::menu_loop()
 
 
 
-            if(game)
+            if(game && !level && !menu)
             {
-                //std::cout << "itt vagyok" << std::endl;
                 gout << move_to(0,0) << color(0,0,0) << box(_width,_height);
 
                 if (ev.type == ev_mouse || ev.type == ev_key ) {
                     for (size_t i=0;i<widgets.size();i++) {
                         if (widgets[i]->is_selected(ev.pos_x, ev.pos_y) && widgets[i]->_flag == "box") {
                                 fs = i;
-                               // std::cout << fs << std::endl;
                         }
 
                     }
+
+                if(fs >= 0)
+                {
+                    widgets[fs]->handle(ev);
+                }
                 for(Widget * w : widgets)
                 {
-                    //if(w->_flag == "cim" ) w->draw();
                     if(w->_flag == "palya") w->draw();
                     if(w-> _flag == "box") w->draw();
                 }
