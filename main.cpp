@@ -2,10 +2,12 @@
 #include "widgets.hpp"
 #include "app.hpp"
 #include "push_button.hpp"
-#include <iostream>
 #include "static_pics.hpp"
 #include "map.hpp"
 #include "spinbox.hpp"
+#include "jatekmester.hpp"
+
+#include <iostream>
 #include <fstream>
 #include <string>
 #include <sstream>
@@ -14,6 +16,7 @@ using namespace genv;
 using namespace std;
 
 class App;
+class JatekMester;
 
 struct Menu : public App
 {
@@ -21,12 +24,14 @@ protected:
     Push_button * start;
     Push_button * exit;
     Static_pics * cim;
-    Push_button * easy;
-    Push_button * medium;
-    Push_button * hard;
+    Funktor_Button * easy;
+    Funktor_Button * medium;
+    Funktor_Button * hard;
     Push_button * _back;
     Field * palya;
     Spinbox * box;
+    vector<Spinbox*> boxes;
+
 
 public:
     Menu(int w_width, int w_height) : App(w_width, w_height)
@@ -38,24 +43,28 @@ public:
 
         //Szintek
         _back = new Push_button(this,300,520,200,50,"back","kepek/back.csv","kepek/backkj.csv");
-        easy = new Push_button(this,300,280,200,50,"easy","kepek/easy.csv","kepek/easykj.csv");
-        medium = new Push_button(this,300,360,200,50,"medium","kepek/medium.csv","kepek/mediumkj.csv");
-        hard = new Push_button(this,300,440,200,50,"hard","kepek/hard.csv","kepek/hardkj.csv");
+        easy = new Funktor_Button(this,300,280,200,50,"easy","kepek/easy.csv","kepek/easykj.csv",[&](){level("easy.txt");});
+        medium = new Funktor_Button(this,300,360,200,50,"medium","kepek/medium.csv","kepek/mediumkj.csv",[&](){level("medium.txt");});
+        hard = new Funktor_Button(this,300,440,200,50,"hard","kepek/hard.csv","kepek/hardkj.csv",[&](){level("hard.txt");});
 
         //pálya
 
         palya = new Field(this,125,200,550,550,"palya");
 
-        vector<string> es;
+
+    }
+
+    void level(std::string file)
+    {
+        vector<string> w;
         string line;
-        ifstream e ("easy.txt");
-        while(getline(e,line))
+        ifstream load (file);
+        for(int i = 0; i < 10000;i++)
         {
-            getline(e,line);
-            es.push_back(line);
+            getline(load,line);
+            w.push_back(line);
         }
-        line = es[rand()%5000];
-        cout << line[0];
+        line = w[rand()%10000];
         int x = 0;
         int k = 0;
         string c;
@@ -65,11 +74,22 @@ public:
             {
                 c = line[x];
                 box = new Spinbox(this,125+j*60+j*1,200+i*60+i*1,60,60,"box",1,9,c);
+                boxes.push_back(box);
                 x++;
             }
         }
+    }
+
+    void Board_set()
+    {
+        for(int i = 0; i < boxes.size();i++)
+        {
+
+
+        }
 
     }
+
 };
 
 

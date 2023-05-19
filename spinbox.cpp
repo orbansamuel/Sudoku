@@ -38,48 +38,25 @@ if(ev.type == ev_key)
         else if(ev.keyname == "7") _i = 7;
         else if(ev.keyname == "8") _i = 8;
         else if(ev.keyname == "9") _i = 9;
-        std::cout << ev.keyname << std::endl;
+        //std::cout << ev.keyname << std::endl;
 }
+    if(_szam == "0") _text = std::to_string(_i);
+    else _text = _szam;
 
-    _text = std::to_string(_i);
+    //std::cout << _text << std::endl;
 }
 
 void Spinbox::draw()
 {
-    if(_szam == "0")
-    {
-    gout << color(_c,200,0) << move_to(_x+_sx/4,_y+_sy/3) << text(_text);
-    }
-    else
-    {
-        gout.load_font("cool.ttf",30);
-        gout << color(0,0,0) << move_to(_x+_sx/4,_y+_sy/3) << text(_szam);
-    }
+
+    gout.load_font("cool.ttf",30);
+    if(_szam == "0" and _text == "0") gout << color(0,150,255) << move_to(_x+_sx/4,_y+_sy/3) << text(" ");
+    else if(_szam == "0") gout << color(0,150,255) << move_to(_x+_sx/4,_y+_sy/3) << text(_text);
+    else gout << color(0,0,0) << move_to(_x+_sx/4,_y+_sy/3) << text(_szam);
+
+
 }
 
-
-
-
-bool Spinbox::up(genv::event ev)
-{
-    if(ev.pos_x > _x+_sx-_sx/4-15 && ev.pos_x < _x+_sx-_sx/4+15 &&
-       ev.pos_y > _y+_sy/4-15 && ev.pos_y < _y+_sy/4+15 && ev.button == btn_left)
-    {
-        return true;
-    }
-    return false;
-}
-
-bool Spinbox::down(genv::event ev)
-{
-     if(ev.pos_x > _x+_sx-_sx/4-15 && ev.pos_x < _x+_sx-_sx/4+12
-        && ev.pos_y > _y+_sy-_sy/3-5 && ev.pos_y < _y+_sy-_sy/3 + 30 && ev.button == btn_left)
-    {
-        return true;
-    }
-    return false;
-
-}
 
 
 

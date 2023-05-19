@@ -24,8 +24,6 @@ public:
     }
     virtual void draw() override;
     virtual void handle(genv::event ev) override;
-    virtual bool up(genv::event ev);
-    virtual bool down(genv::event ev);
 
 
 };

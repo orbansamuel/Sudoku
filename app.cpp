@@ -64,9 +64,9 @@ void App::menu_loop()
         }
 
 
-
         if(level && !menu && !game)
         {
+
             gin.wait_event(ev);
            // std::cout << "itt voltam" << std::endl;
             gout << move_to(0,0) << color(0,0,0) << box(_width,_height);
@@ -112,6 +112,18 @@ void App::menu_loop()
                         level = false;
                         break;
                 }
+                else if(click(ev,i,"medium","level"))
+                {
+                        game = true;
+                        level = false;
+                        break;
+                }
+                else if(click(ev,i,"hard","level"))
+                {
+                        game = true;
+                        level = false;
+                        break;
+                }
             }
         }
 
@@ -138,7 +150,13 @@ void App::menu_loop()
                     if(w->_flag == "palya") w->draw();
                     if(w-> _flag == "box") w->draw();
                 }
+                if(ev.keycode == key_escape)
+                {
+                    game = false;
+                    menu = true;
+                }
             }
+
 
 
             }

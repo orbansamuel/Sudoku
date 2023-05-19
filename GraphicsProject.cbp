@@ -48,6 +48,8 @@
 		<Unit filename="app.cpp" />
 		<Unit filename="app.hpp" />
 		<Unit filename="graphicslib/graphics.cpp" />
+		<Unit filename="jatekmester.cpp" />
+		<Unit filename="jatekmester.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="map.cpp" />
 		<Unit filename="map.hpp" />

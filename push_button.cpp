@@ -14,7 +14,9 @@ using namespace std;
 void Push_button::handle(genv::event ev)
 {
     if(is_selected(ev.pos_x,ev.pos_y)) file = _selected;
+
     else file = _unselected;
+
 
 }
 
@@ -42,7 +44,19 @@ void Push_button::draw()
 }
 
 
+void Funktor_Button::handle(genv::event ev)
+{
 
+    if(is_selected(ev.pos_x,ev.pos_y)) file = _selected;
+
+    else file = _unselected;
+
+    if(is_selected(ev.pos_x,ev.pos_y) && ev.button == btn_left)
+    {
+        action();
+    }
+
+}
 
 
 
