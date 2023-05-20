@@ -13,6 +13,8 @@ void App::menu_loop()
     while(gin >> ev)
     {
 //&& ev.button==btn_left
+        int mouse_x = ev.pos_x;
+        int mouse_y = ev.pos_y;
         if(menu && !game && !level)
         {
             gout << move_to(0,0) << color(0,0,0) << box(_width,_height);
@@ -44,7 +46,6 @@ void App::menu_loop()
             }
             gout << refresh;
 
-            //std::cout << fs << std::endl;
             for (size_t i=0;i<widgets.size();i++) {
                 if(click(ev,i,"exit","menu"))
                 {
@@ -68,7 +69,7 @@ void App::menu_loop()
         {
 
             gin.wait_event(ev);
-           // std::cout << "itt voltam" << std::endl;
+
             gout << move_to(0,0) << color(0,0,0) << box(_width,_height);
 
              if (ev.type == ev_mouse )
@@ -78,7 +79,6 @@ void App::menu_loop()
                     if (widgets[i]->is_selected(ev.pos_x, ev.pos_y) && (widgets[i]->_flag == "easy" || widgets[i]->_flag == "back" || widgets[i]->_flag == "medium" || widgets[i]->_flag == "hard"  ))
                     {
                         fs = i;
-                        // std::cout << fs << std::endl;
                     }
                  }
              }
@@ -106,19 +106,7 @@ void App::menu_loop()
                     menu = true;
                     break;
                 }
-                else if(click(ev,i,"easy","level"))
-                {
-                        game = true;
-                        level = false;
-                        break;
-                }
-                else if(click(ev,i,"medium","level"))
-                {
-                        game = true;
-                        level = false;
-                        break;
-                }
-                else if(click(ev,i,"hard","level"))
+                else if(click(ev,i,"easy","level") || click(ev,i,"medium","level") || click(ev,i,"hard","level"))
                 {
                         game = true;
                         level = false;
@@ -177,4 +165,6 @@ bool App::click(genv::event ev,int loop,std::string name,std::string state)
             return true;
      }
      else{ return false;}
+
+     return false;
 }

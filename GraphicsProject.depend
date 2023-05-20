@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1684480775 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
+1684578769 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
 	"app.hpp"
 	"graphics.hpp"
 	<iostream>
 
-1684257737 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
+1684578869 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
 	<vector>
 	"widgets.hpp"
+	"jatekmester.hpp"
 	<string>
 
 1684068537 c:\users\orbán sámuel\documents\github\sudoku\widgets.hpp
@@ -414,7 +415,7 @@
 	"graphics.hpp"
 	"app.hpp"
 
-1684532060 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
+1684587751 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"app.hpp"
@@ -475,20 +476,25 @@
 1684089187 c:\users\orbán sámuel\documents\github\sudoku\map.hpp
 	"widgets.hpp"
 
-1684488660 source:c:\users\orbán sámuel\documents\github\sudoku\spinbox.cpp
+1684585544 source:c:\users\orbán sámuel\documents\github\sudoku\spinbox.cpp
 	"graphics.hpp"
 	"spinbox.hpp"
 	"app.hpp"
 	<iostream>
 	<string>
 
-1684405685 c:\users\orbán sámuel\documents\github\sudoku\spinbox.hpp
+1684585531 c:\users\orbán sámuel\documents\github\sudoku\spinbox.hpp
 	"widgets.hpp"
+	<functional>
 
-1684429117 source:c:\users\orbán sámuel\documents\github\sudoku\jatekmester.cpp
+1684587816 source:c:\users\orbán sámuel\documents\github\sudoku\jatekmester.cpp
 	"jatekmester.hpp"
 	<iostream>
-
-1684429017 c:\users\orbán sámuel\documents\github\sudoku\jatekmester.hpp
 	<vector>
+	"spinbox.hpp"
+	"graphics.hpp"
+
+1684587093 c:\users\orbán sámuel\documents\github\sudoku\jatekmester.hpp
+	<vector>
+	"spinbox.hpp"
 

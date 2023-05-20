@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "widgets.hpp"
+#include "jatekmester.hpp"
 #include <string>
 
 
@@ -12,6 +13,9 @@ protected:
    std::vector<Widget*> widgets;
     int _width,_height;
 public:
+    int mouse_x;
+    int mouse_y;
+    JatekMester master;
     App(int width,int height) : _width(width), _height(height)
     {
         genv::gout.open(width,height);

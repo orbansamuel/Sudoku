@@ -16,11 +16,12 @@ using namespace genv;
 using namespace std;
 
 class App;
-class JatekMester;
+//class JatekMester;
 
 struct Menu : public App
 {
 protected:
+    JatekMester master;
     Push_button * start;
     Push_button * exit;
     Static_pics * cim;
@@ -31,6 +32,7 @@ protected:
     Field * palya;
     Spinbox * box;
     vector<Spinbox*> boxes;
+
 
 
 public:
@@ -56,6 +58,7 @@ public:
 
     void level(std::string file)
     {
+        event ev;
         vector<string> w;
         string line;
         ifstream load (file);
@@ -66,27 +69,37 @@ public:
         }
         line = w[rand()%10000];
         int x = 0;
-        int k = 0;
+        int k = ev.pos_x;
         string c;
         for(int i = 0; i < 9; i++)
             for(int j = 0; j < 9; j++)
         {
             {
                 c = line[x];
-                box = new Spinbox(this,125+j*60+j*1,200+i*60+i*1,60,60,"box",1,9,c);
+                box = new Spinbox(this,125+j*60+j*1,200+i*60+i*1,60,60,"box",1,9,c,[&](){Board_set(boxes);});
                 boxes.push_back(box);
+                master._board.push_back(box->_i);
                 x++;
             }
         }
     }
 
-    void Board_set()
+    bool Board_set(vector<Spinbox*> s)
     {
-        for(int i = 0; i < boxes.size();i++)
+        bool sor,oszlop,tomb;
+
+        for(int i = 0; i < 81; i++)
+        {
+           master._board[i] = s[i]->_i;
+        }
+
+        for(int i = 0;i < 81;i++)
         {
 
-
+               s[i]->szin = master.isMoveValid(master.GetRow(i),master.GetCol(i),s[i]->_i,i);
         }
+
+        //cout << _board << endl;
 
     }
 
