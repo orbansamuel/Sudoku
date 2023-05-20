@@ -15,17 +15,32 @@ int JatekMester::getValue(int row, int col) {
 }
 
 bool JatekMester::isMoveValid(int row, int col, int num,int index) {
-    int startRow = row - row % 3;
-    int startCol = col - col % 3;
+    int startRow = (row/3) * 3;
+    int startCol = (col/3) * 3;
 
-    for (int i = 0; i < 9; i++) {
-        if(row != i && col != i)
-        {
-        if (_board[row * 9 + i] == num) return false;
-        if(_board[i * 9 + col] == num) return false;
-        if(_board[(startRow + i / 3) * 9 + startCol + i % 3] == num) return false;
+    for(int i = 0; i < 9; i++)
+    {
+        if(i != col && _board[row*9 +i] == num) return false;
+    }
+
+    for(int i = 0; i < 9; i++)
+    {
+        if(i != row && _board[i*9+col] == num) return false;
+    }
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            int rowIndex = startRow + i;
+            int colIndex = startCol + j;
+            int boxIndex = rowIndex * 9 + colIndex;
+
+            if (boxIndex != index && _board[boxIndex] == num) {
+                return false;
+            }
         }
     }
+
+
     return true;
 }
 

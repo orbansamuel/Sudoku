@@ -51,7 +51,7 @@ void Spinbox::draw()
         _r = 255;
         _g = 0;
     }
-    else if(szin == true)
+    if(szin == true)
     {
         _g = 255;
         _r = 0;

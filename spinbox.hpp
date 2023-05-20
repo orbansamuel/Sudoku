@@ -24,6 +24,9 @@ public:
 
         _text = szam;
         _i = stoi(_text);
+        _r = 0;
+        _g = 255;
+        szin = true;
     }
     virtual void draw() override;
     virtual void handle(genv::event ev) override;

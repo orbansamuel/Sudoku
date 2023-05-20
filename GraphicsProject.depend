@@ -415,7 +415,7 @@
 	"graphics.hpp"
 	"app.hpp"
 
-1684587751 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
+1684591622 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"app.hpp"
@@ -476,18 +476,18 @@
 1684089187 c:\users\orbán sámuel\documents\github\sudoku\map.hpp
 	"widgets.hpp"
 
-1684585544 source:c:\users\orbán sámuel\documents\github\sudoku\spinbox.cpp
+1684588476 source:c:\users\orbán sámuel\documents\github\sudoku\spinbox.cpp
 	"graphics.hpp"
 	"spinbox.hpp"
 	"app.hpp"
 	<iostream>
 	<string>
 
-1684585531 c:\users\orbán sámuel\documents\github\sudoku\spinbox.hpp
+1684589361 c:\users\orbán sámuel\documents\github\sudoku\spinbox.hpp
 	"widgets.hpp"
 	<functional>
 
-1684587816 source:c:\users\orbán sámuel\documents\github\sudoku\jatekmester.cpp
+1684591429 source:c:\users\orbán sámuel\documents\github\sudoku\jatekmester.cpp
 	"jatekmester.hpp"
 	<iostream>
 	<vector>
