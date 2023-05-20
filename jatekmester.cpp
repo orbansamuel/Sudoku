@@ -5,14 +5,7 @@
 #include "graphics.hpp"
 
 using namespace genv;
-void JatekMester::setValue(int value) {
-   // _board[_index] = value;
-}
 
-int JatekMester::getValue(int row, int col) {
-    int index = row * 9 + col;
-   // return _board[_index];
-}
 
 bool JatekMester::isMoveValid(int row, int col, int num,int index) {
     int startRow = (row/3) * 3;
@@ -20,12 +13,12 @@ bool JatekMester::isMoveValid(int row, int col, int num,int index) {
 
     for(int i = 0; i < 9; i++)
     {
-        if(i != col && _board[row*9 +i] == num) return false;
+        if(i != col && _board[row*9 +i] == num && num > 0) return false;
     }
 
     for(int i = 0; i < 9; i++)
     {
-        if(i != row && _board[i*9+col] == num) return false;
+        if(i != row && _board[i*9+col] == num && num > 0) return false;
     }
 
     for (int i = 0; i < 3; i++) {
@@ -34,7 +27,7 @@ bool JatekMester::isMoveValid(int row, int col, int num,int index) {
             int colIndex = startCol + j;
             int boxIndex = rowIndex * 9 + colIndex;
 
-            if (boxIndex != index && _board[boxIndex] == num) {
+            if (boxIndex != index && _board[boxIndex] == num && num > 0) {
                 return false;
             }
         }
@@ -46,7 +39,7 @@ bool JatekMester::isMoveValid(int row, int col, int num,int index) {
 
 bool JatekMester::isSolved() {
     for (int num : _board) {
-        if (num == 0) {
+        if (num == 0 ) {
             return false;
         }
     }
@@ -54,18 +47,4 @@ bool JatekMester::isSolved() {
 }
 
 
-void JatekMester::GetIndex(std::vector<Spinbox*> s,genv::event ev,int &k)
-{
-    int i = 0;
-    for(Spinbox *b : s)
-    {
 
-        if(b->is_selected(ev.pos_x,ev.pos_y))
-        {
-                k = i;
-        }
-
-        i++;
-    }
-
-}

@@ -23,6 +23,18 @@ void Spinbox::handle(genv::event ev)
             _i--;
         }
 
+    if(szin == true)
+    {
+        _r = 0;
+        _g = 255;
+    }
+    if(szin == false)
+    {
+        _g = 0;
+        _r = 255;
+
+    }
+
 if(ev.type == ev_key)
 {
 
@@ -46,19 +58,9 @@ if(ev.type == ev_key)
 void Spinbox::draw()
 {
 
-    if(szin == false)
-    {
-        _r = 255;
-        _g = 0;
-    }
-    if(szin == true)
-    {
-        _g = 255;
-        _r = 0;
 
-    }
     gout.load_font("cool.ttf",30);
-    if(_szam == "0" and _text == "0") gout << color(0,150,255) << move_to(_x+_sx/4,_y+_sy/3) << text(" ");
+    if(_szam == "0" and _text == "0") gout << move_to(_x+_sx/4,_y+_sy/3) << text(" ");
     else if(_szam == "0") gout << color(_r,_g,_b) << move_to(_x+_sx/4,_y+_sy/3) << text(_text);
     else gout << color(0,0,0) << move_to(_x+_sx/4,_y+_sy/3) << text(_szam);
 

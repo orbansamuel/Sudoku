@@ -12,7 +12,6 @@ public:
     JatekMester()
     {
     }
-    void setValue(int index);
     int GetRow(int index)
     {
        return (index / 9);
@@ -21,11 +20,9 @@ public:
     {
        return (index % 9);
     }
-    void GetIndex(std::vector<Spinbox*> s,genv::event ev,int &k);
-    int getValue(int row, int col);
     bool isMoveValid(int row, int col, int num,int index);
     bool isSolved();
-    void printBoard();
+
 
 
 

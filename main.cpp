@@ -99,8 +99,6 @@ public:
                s[i]->szin = master.isMoveValid(master.GetRow(i),master.GetCol(i),s[i]->_i,i);
         }
 
-        //cout << _board << endl;
-
     }
 
 };

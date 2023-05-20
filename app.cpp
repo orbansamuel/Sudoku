@@ -15,6 +15,7 @@ void App::menu_loop()
 //&& ev.button==btn_left
         int mouse_x = ev.pos_x;
         int mouse_y = ev.pos_y;
+
         if(menu && !game && !level)
         {
             gout << move_to(0,0) << color(0,0,0) << box(_width,_height);

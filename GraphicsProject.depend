@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1684578769 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
+1684593276 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
 	"app.hpp"
 	"graphics.hpp"
 	<iostream>
@@ -476,7 +476,7 @@
 1684089187 c:\users\orbán sámuel\documents\github\sudoku\map.hpp
 	"widgets.hpp"
 
-1684588476 source:c:\users\orbán sámuel\documents\github\sudoku\spinbox.cpp
+1684593489 source:c:\users\orbán sámuel\documents\github\sudoku\spinbox.cpp
 	"graphics.hpp"
 	"spinbox.hpp"
 	"app.hpp"
@@ -487,14 +487,14 @@
 	"widgets.hpp"
 	<functional>
 
-1684591429 source:c:\users\orbán sámuel\documents\github\sudoku\jatekmester.cpp
+1684593609 source:c:\users\orbán sámuel\documents\github\sudoku\jatekmester.cpp
 	"jatekmester.hpp"
 	<iostream>
 	<vector>
 	"spinbox.hpp"
 	"graphics.hpp"
 
-1684587093 c:\users\orbán sámuel\documents\github\sudoku\jatekmester.hpp
+1684592482 c:\users\orbán sámuel\documents\github\sudoku\jatekmester.hpp
 	<vector>
 	"spinbox.hpp"
 
