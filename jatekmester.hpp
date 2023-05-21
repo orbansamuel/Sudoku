@@ -21,7 +21,6 @@ public:
        return (index % 9);
     }
     bool isMoveValid(int row, int col, int num,int index);
-    bool isSolved();
 
 
 

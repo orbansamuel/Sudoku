@@ -7,9 +7,6 @@
 using namespace genv;
 void Spinbox::handle(genv::event ev)
 {
-       if(is_selected(ev.pos_x,ev.pos_y)) action();
-
-
         if (ev.keycode == 65536 && _i < _max) {
             _i++;
         }
@@ -23,18 +20,6 @@ void Spinbox::handle(genv::event ev)
             _i--;
         }
 
-    if(szin == true)
-    {
-        _r = 0;
-        _g = 255;
-    }
-    if(szin == false)
-    {
-        _g = 0;
-        _r = 255;
-
-    }
-
 if(ev.type == ev_key)
 {
 
@@ -47,18 +32,26 @@ if(ev.type == ev_key)
         else if(ev.keyname == "7") _i = 7;
         else if(ev.keyname == "8") _i = 8;
         else if(ev.keyname == "9") _i = 9;
-        //std::cout << ev.keyname << std::endl;
 }
     if(_szam == "0") _text = std::to_string(_i);
     else _text = _szam;
 
-    //std::cout << _text << std::endl;
 }
 
 void Spinbox::draw()
 {
+    action();
+        if(szin == true)
+    {
+        _r = 0;
+        _g = 255;
+    }
+    if(szin == false)
+    {
+        _g = 0;
+        _r = 255;
 
-
+    }
     gout.load_font("cool.ttf",30);
     if(_szam == "0" and _text == "0") gout << move_to(_x+_sx/4,_y+_sy/3) << text(" ");
     else if(_szam == "0") gout << color(_r,_g,_b) << move_to(_x+_sx/4,_y+_sy/3) << text(_text);

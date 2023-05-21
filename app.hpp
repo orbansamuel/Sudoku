@@ -13,8 +13,7 @@ protected:
    std::vector<Widget*> widgets;
     int _width,_height;
 public:
-    int mouse_x;
-    int mouse_y;
+    bool megoldva = false;
     JatekMester master;
     App(int width,int height) : _width(width), _height(height)
     {

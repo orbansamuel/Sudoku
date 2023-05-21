@@ -37,14 +37,6 @@ bool JatekMester::isMoveValid(int row, int col, int num,int index) {
     return true;
 }
 
-bool JatekMester::isSolved() {
-    for (int num : _board) {
-        if (num == 0 ) {
-            return false;
-        }
-    }
-    return true;
-}
 
 
 
