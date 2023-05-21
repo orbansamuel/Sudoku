@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1684665338 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
+1684670300 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
 	"app.hpp"
 	"graphics.hpp"
 	<iostream>
 	<string>
 
-1684665753 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
+1684670300 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
 	<vector>
 	"widgets.hpp"
 	"jatekmester.hpp"
@@ -416,7 +416,7 @@
 	"graphics.hpp"
 	"app.hpp"
 
-1684665511 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
+1684670314 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"app.hpp"

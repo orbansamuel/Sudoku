@@ -4,7 +4,7 @@
 #include <string>
 using namespace genv;
 
-void App::menu_loop()
+void App::App_loop()
 {
     bool out = false, game = false, level = false, menu = true;
     event ev;

@@ -18,7 +18,7 @@ using namespace std;
 class App;
 //class JatekMester;
 
-struct Menu : public App
+struct My_App : public App
 {
 protected:
     JatekMester master;
@@ -37,7 +37,7 @@ protected:
 public:
     vector<Spinbox*> boxes;
 
-    Menu(int w_width, int w_height) : App(w_width, w_height)
+     My_App(int w_width, int w_height) : App(w_width, w_height)
     {
         // Start menü
         cim = new Static_pics(this, 150, 100, 500, 200, "cim", "kepek/cim.csv");
@@ -132,8 +132,8 @@ public:
 
 int main()
 {
-    Menu* menu = new Menu(800, 800);
-    menu->menu_loop();
+    My_App* game = new My_App(800, 800);
+    game->App_loop();
     return 0;
 }
 
