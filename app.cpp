@@ -76,8 +76,6 @@ void App::App_loop()
         {
             gin.wait_event(ev);
 
-            gout << move_to(0, 0) << color(0, 0, 0) << box(_width, _height);
-
             if (ev.type == ev_mouse)
             {
                 for (size_t i = 0; i < widgets.size(); i++)
@@ -131,7 +129,6 @@ void App::App_loop()
 
         if (game && !level && !menu)
         {
-            gout << move_to(0, 0) << color(0, 0, 0) << box(_width, _height);
 
             if (ev.type == ev_mouse || ev.type == ev_key)
             {
@@ -173,6 +170,11 @@ void App::App_loop()
         }
 
         gout << refresh;
+        for (Widget *w : widgets)
+            {
+                if (w->_flag == "friss")
+                    w->draw();
+            }
     }
 }
 

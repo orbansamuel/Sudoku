@@ -61,6 +61,10 @@
 		<Unit filename="spinbox.hpp" />
 		<Unit filename="static_pics.cpp" />
 		<Unit filename="static_pics.hpp" />
+		<Unit filename="update.cpp" />
+		<Unit filename="update.hpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="widgets.cpp" />
 		<Unit filename="widgets.hpp" />
 		<Extensions />

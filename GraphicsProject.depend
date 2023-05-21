@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1684670300 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
+1684705511 source:c:\users\orbán sámuel\documents\github\sudoku\app.cpp
 	"app.hpp"
 	"graphics.hpp"
 	<iostream>
 	<string>
 
-1684670300 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
+1684704319 c:\users\orbán sámuel\documents\github\sudoku\app.hpp
 	<vector>
 	"widgets.hpp"
 	"jatekmester.hpp"
@@ -416,7 +416,7 @@
 	"graphics.hpp"
 	"app.hpp"
 
-1684670314 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
+1684705419 source:c:\users\orbán sámuel\documents\github\sudoku\main.cpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"app.hpp"
@@ -425,6 +425,7 @@
 	"map.hpp"
 	"spinbox.hpp"
 	"jatekmester.hpp"
+	"update.hpp"
 	<iostream>
 	<fstream>
 	<string>
@@ -468,13 +469,13 @@
 	<fstream>
 	<sstream>
 
-1684247605 source:c:\users\orbán sámuel\documents\github\sudoku\map.cpp
+1684704319 source:c:\users\orbán sámuel\documents\github\sudoku\map.cpp
 	"map.hpp"
 	"graphics.hpp"
 	"widgets.hpp"
 	"spinbox.hpp"
 
-1684089187 c:\users\orbán sámuel\documents\github\sudoku\map.hpp
+1684704319 c:\users\orbán sámuel\documents\github\sudoku\map.hpp
 	"widgets.hpp"
 
 1684665583 source:c:\users\orbán sámuel\documents\github\sudoku\spinbox.cpp
@@ -498,4 +499,12 @@
 1684664021 c:\users\orbán sámuel\documents\github\sudoku\jatekmester.hpp
 	<vector>
 	"spinbox.hpp"
+
+1684705393 c:\users\orbán sámuel\documents\github\sudoku\update.hpp
+	"widgets.hpp"
+
+1684705409 source:c:\users\orbán sámuel\documents\github\sudoku\update.cpp
+	"update.hpp"
+	"graphics.hpp"
+	"widgets.hpp"
 

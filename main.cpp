@@ -6,6 +6,7 @@
 #include "map.hpp"
 #include "spinbox.hpp"
 #include "jatekmester.hpp"
+#include "update.hpp"
 
 #include <iostream>
 #include <fstream>
@@ -21,6 +22,7 @@ class App;
 struct My_App : public App
 {
 protected:
+        UpD * u;
     JatekMester master;
     Push_button* start;
     Push_button* exit;
@@ -33,6 +35,7 @@ protected:
     Field* palya;
     Spinbox* box;
     Static_pics* moldva;
+
 
 public:
     vector<Spinbox*> boxes;
@@ -54,6 +57,8 @@ public:
         palya = new Field(this, 125, 200, 550, 550, "palya");
         back2 = new Funktor_Button(this, 100, 100, 200, 50, "back2", "kepek/back.csv", "kepek/backkj.csv", [&]() { board_clear(); });
         moldva = new Static_pics(this, 400, 100, 200, 50, "+oldva", "kepek/megoldva.csv");
+
+        u = new UpD(this,0,0,800,800,"friss");
     }
 
     void level(std::string file)
@@ -74,7 +79,7 @@ public:
         {
             for (int j = 0; j < 9; j++)
             {
-                int                 szam = stoi(string(1, line[x]));
+                int szam = stoi(string(1, line[x]));
                 master._board.push_back(szam);
                 c = to_string(master._board[x]);
                 box = new Spinbox(this, 125 + j * 60 + j * 1, 200 + i * 60 + i * 1, 60, 60, "box", 1, 9, c, [&]() { Board_set(boxes); });
