@@ -67,7 +67,7 @@ public:
             getline(load, line);
             w.push_back(line);
         }
-        line = w[rand() % 10000];
+        line = w[rand()%10000];
         int x = 0;
         string c;
         for (int i = 0; i < 9; i++)
@@ -102,6 +102,7 @@ public:
         {
             megoldva = true;
         }
+        else megoldva = false;
     }
 
     void board_clear()
